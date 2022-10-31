@@ -24,4 +24,4 @@
   
 # 其他
   * TDD、BDD 先行走一次熟悉開發方法
-  * [card image](https://www.flaticon.com/packs/playing-cards-5, "Flaticon.com")
+  * [card image](https://www.flaticon.com/packs/playing-cards-5 "Flaticon.com")
