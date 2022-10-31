@@ -15,11 +15,12 @@
    * Frontend: js/angular/vue
    * DB: RDBMS
    * infra: 沒有自己接觸過
+
 ### 發想/討論過程
-[大老二](https://miro.com/app/board/uXjVPKxMq7I=/?share_link_id=999661265235)
+[大老二](https://miro.com/app/board/uXjVPKxMq7I=/?share_link_id=999661265235 "Miro.com")
 
 # 開發流程
-  * 一周最少一次進度更新
+  * 一周一次進度更新
   * 整理領域知識->分析需求->BDD->TDD->MVC架構
   
 # 其他
