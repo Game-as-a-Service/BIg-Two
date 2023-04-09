@@ -17,7 +17,7 @@
    * infra: 沒有自己接觸過
 
 ### 發想/討論過程
-[大老二](https://miro.com/app/board/uXjVPKxMq7I=/?share_link_id=999661265235 "Miro.com")
+* [大老二](https://miro.com/app/board/uXjVPKxMq7I=/?share_link_id=999661265235 "Miro.com")
 
 # 開發流程
   * 一周一次進度更新
