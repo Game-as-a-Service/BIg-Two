@@ -32,9 +32,8 @@ public class Deck {
 
 	public static List<Card> deal(List<Card> deckCardList, int handCardSize) {
 		int deckSize = deckCardList.size();
-		List<Card> handView = deckCardList.subList(deckSize - handCardSize, deckSize);
-		List<Card> hand = new ArrayList<>(handView);
-		handView.clear();
-		return hand;
+	    List<Card> hand = new ArrayList<>(deckCardList.subList(deckSize - handCardSize, deckSize));
+	    deckCardList.subList(deckSize - handCardSize, deckSize).clear();
+	    return hand;
 	}
 }
