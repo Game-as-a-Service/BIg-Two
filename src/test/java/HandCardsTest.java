@@ -12,6 +12,13 @@ class HandCardsTest {
 	private static final int TOTAL_CARD_COUNT = 52;
 
 	@Test
+	void testDeckCard_isFiftyTwo() {
+		// 牌桌52張牌
+		List<Card> deckCardList = Deck.newDeck();
+		assertEquals(TOTAL_CARD_COUNT, deckCardList.size());
+	}
+	
+	@Test
 	void testGameInitialHandCardsIsThirteen() {
 		// WHEN 遊戲開始4人進入
 		BigTwo game = new BigTwo(Arrays.asList(new Player("big mussle"), new Player("handsome"), new Player("white"), new Player("beauty")));
@@ -19,7 +26,6 @@ class HandCardsTest {
 
 		// 牌桌52張牌
 		List<Card> deckCardList = Deck.newDeck();
-		assertEquals(TOTAL_CARD_COUNT, deckCardList.size());
 
 		// THEN 初始發牌給各花色13張
 		for (Player playerObj : game.getPlayerList()) {

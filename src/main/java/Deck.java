@@ -3,16 +3,17 @@ import java.util.List;
 import java.util.Random;
 
 public class Deck {
-	private static final List<Card> protoDeck = new ArrayList<>();
+	private static List<Card> protoDeck;
 
-	static {
-		for (Suit suit : Suit.values())
-			for (Rank rank : Rank.values())
-				protoDeck.add(new Card(rank, suit));
-	}
-
-	public static List<Card> newDeck() {
-		return shuffle(protoDeck);
+	public static synchronized List<Card> newDeck() {
+		if (null == protoDeck || protoDeck.isEmpty()) {
+			protoDeck = new ArrayList<>();
+			for (Suit suit : Suit.values())
+				for (Rank rank : Rank.values())
+					protoDeck.add(new Card(rank, suit));
+			shuffle(protoDeck);
+		}
+		return new ArrayList<>(protoDeck);
 	}
 
 	private static List<Card> shuffle(List<Card> deckCardList) {
