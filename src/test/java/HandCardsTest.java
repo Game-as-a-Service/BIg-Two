@@ -12,6 +12,12 @@ class HandCardsTest {
 	private static final int TOTAL_CARD_COUNT = 52;
 
 	@Test
+	void testGameInitialHaveFourPlayer() {
+		BigTwo game = new BigTwo(Arrays.asList(new Player("big mussle"), new Player("handsome"), new Player("white"), new Player("beauty")));
+		assertEquals(PLAYER_AMOUNT_FOUR, game.getPlayerList().size());
+	}
+	
+	@Test
 	void testDeckCard_isFiftyTwo() {
 		// 牌桌52張牌
 		List<Card> deckCardList = Deck.newDeck();
@@ -22,7 +28,6 @@ class HandCardsTest {
 	void testGameInitialHandCardsIsThirteen() {
 		// WHEN 遊戲開始4人進入
 		BigTwo game = new BigTwo(Arrays.asList(new Player("big mussle"), new Player("handsome"), new Player("white"), new Player("beauty")));
-		assertEquals(PLAYER_AMOUNT_FOUR, game.getPlayerList().size());
 
 		// 牌桌52張牌
 		List<Card> deckCardList = Deck.newDeck();
