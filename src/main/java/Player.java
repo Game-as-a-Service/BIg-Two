@@ -11,8 +11,12 @@ public class Player {
 		this.name = name;
 	}
 
-	public Card playCard() {
-		return FIRST_CARD;
+	public Card playCard(int cardIndex) throws FirstCardNotThreeOfClubs {
+		Card card = handcards.showCard(cardIndex);
+		if (!Player.FIRST_CARD.toString().equals(card.toString())) {
+			throw new FirstCardNotThreeOfClubs("you card is not Three og Clubs.");
+		}
+		return card;
 	}
 	
 	public String getName() {
