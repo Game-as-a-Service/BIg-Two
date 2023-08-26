@@ -15,5 +15,9 @@ public class BigTwo {
 	public void setPlayerList(List<Player> playerList) {
 		this.playerList = playerList;
 	}
+	
+	public void playGame(Player player, int index) throws FirstCardNotThreeOfClubs {
+		player.playCard(index);
+	}
 
 }
