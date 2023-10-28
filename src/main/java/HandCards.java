@@ -14,4 +14,8 @@ public class HandCards {
 	public int getCardCount() {
 		return getCards().size();
 	}
+	
+	public Card showCard(int cardIndex) {
+		return cards.remove(cardIndex);
+	}
 }
