@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Player {
-	private static final Card FIRST_CARD = new Card(Rank.THREE, Suit.CLUBS);
+	private static final Card FIRST_CARD = new Card(Rank.THREE, Suit.C);
 	
 	private String name;
 	private HandCards handcards = new HandCards();

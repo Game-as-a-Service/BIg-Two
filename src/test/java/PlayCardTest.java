@@ -41,8 +41,8 @@ class PlayCardTest {
 
 	private HandCards initHandCard() {
 		List<Card> cardList = new ArrayList<>();
-		cardList.add(new Card(Rank.THREE, Suit.CLUBS));
-		cardList.add(new Card(Rank.FOUR, Suit.CLUBS));
+		cardList.add(new Card(Rank.THREE, Suit.C));
+		cardList.add(new Card(Rank.FOUR, Suit.C));
 
 		HandCards hand = new HandCards();
 		hand.addCards(cardList);
@@ -51,8 +51,8 @@ class PlayCardTest {
 
 	private HandCards initHandCardReverse() {
 		List<Card> cardList = new ArrayList<>();
-		cardList.add(new Card(Rank.FOUR, Suit.CLUBS));
-		cardList.add(new Card(Rank.THREE, Suit.CLUBS));
+		cardList.add(new Card(Rank.FOUR, Suit.C));
+		cardList.add(new Card(Rank.THREE, Suit.C));
 
 		HandCards hand = new HandCards();
 		hand.addCards(cardList);
