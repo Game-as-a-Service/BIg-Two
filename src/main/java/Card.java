@@ -22,7 +22,7 @@ public class Card {
 }
 
 enum Rank {
-	THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE, DEUCE
+	ACE, DEUCE, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
 }
 
 enum Suit {
