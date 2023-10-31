@@ -92,5 +92,42 @@ class StraightFlushTest {
 		assertFalse(straightFlushType.isVaildCardType(player, new ArrayList<>()));
 	}
 	
+	@Test
+	void test_compare_clubs12345_and_diamonds12345_topCardBigger() {
+		StraightFlush straightFlushType = new StraightFlush();
+		List<Card> topCardList = new ArrayList<>();
+		topCardList.add(new Card(Rank.ACE, Suit.S));
+		topCardList.add(new Card(Rank.DEUCE, Suit.S));
+		topCardList.add(new Card(Rank.THREE, Suit.S));
+		topCardList.add(new Card(Rank.FOUR, Suit.S));
+		topCardList.add(new Card(Rank.FIVE, Suit.S));
+		
+		List<Card> cardList = new ArrayList<>();
+		cardList.add(new Card(Rank.ACE, Suit.D));
+		cardList.add(new Card(Rank.DEUCE, Suit.D));
+		cardList.add(new Card(Rank.THREE, Suit.D));
+		cardList.add(new Card(Rank.FOUR, Suit.D));
+		cardList.add(new Card(Rank.FIVE, Suit.D));
+		assertTrue(straightFlushType.rankingCard(topCardList, cardList));
+	}
+	
+	@Test
+	void test_compare_clubs12345_and_diamonds12345_topCardSmall() {
+		StraightFlush straightFlushType = new StraightFlush();
+		List<Card> topCardList = new ArrayList<>();
+		topCardList.add(new Card(Rank.ACE, Suit.C));
+		topCardList.add(new Card(Rank.DEUCE, Suit.C));
+		topCardList.add(new Card(Rank.THREE, Suit.C));
+		topCardList.add(new Card(Rank.FOUR, Suit.C));
+		topCardList.add(new Card(Rank.FIVE, Suit.C));
+		
+		List<Card> cardList = new ArrayList<>();
+		cardList.add(new Card(Rank.ACE, Suit.D));
+		cardList.add(new Card(Rank.DEUCE, Suit.D));
+		cardList.add(new Card(Rank.THREE, Suit.D));
+		cardList.add(new Card(Rank.FOUR, Suit.D));
+		cardList.add(new Card(Rank.FIVE, Suit.D));
+		assertFalse(straightFlushType.rankingCard(topCardList, cardList));
+	}
 	
 }

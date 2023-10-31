@@ -13,7 +13,7 @@ public abstract class CardType {
 
 	abstract boolean isVaildCardType(Player player, List<Card> cardList);
 
-	abstract boolean rankingCard();
+	abstract boolean rankingCard(List<Card> topCardList, List<Card> cardList);
 
 	abstract String cardType();
 

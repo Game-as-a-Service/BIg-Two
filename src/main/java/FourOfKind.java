@@ -39,7 +39,7 @@ public class FourOfKind extends CardType {
 	}
 
 	@Override
-	boolean rankingCard() {
+	boolean rankingCard(List<Card> topCardList, List<Card> cardList) {
 		// TODO Auto-generated method stub
 		return false;
 	}

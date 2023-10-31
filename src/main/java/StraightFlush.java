@@ -42,14 +42,34 @@ public class StraightFlush extends CardType {
 	}
 
 	@Override
-	boolean rankingCard() {
-		// TODO Auto-generated method stub
+	boolean rankingCard(List<Card> topCardList, List<Card> cardList) {
+		if (topCardList.size() == 5 && cardList.size() == 5) {
+			// 排序，協助接下來的判斷
+			Collections.sort(topCardList, new Comparator<Card>() {
+				public int compare(Card c1, Card c2) {
+					return Integer.valueOf(c1.rank().ordinal()).compareTo(Integer.valueOf(c2.rank().ordinal()));
+				}
+			});
+			
+			Collections.sort(cardList, new Comparator<Card>() {
+				public int compare(Card c1, Card c2) {
+					return Integer.valueOf(c1.rank().ordinal()).compareTo(Integer.valueOf(c2.rank().ordinal()));
+				}
+			});
+			
+			System.out.println("牌桌頂牌: " + Integer.valueOf(topCardList.get(0).suit().ordinal()));
+			System.out.println("欲出手牌: " + Integer.valueOf(cardList.get(0).suit().ordinal()));
+			if (Integer.valueOf(topCardList.get(0).suit().ordinal())
+					.compareTo(Integer.valueOf(cardList.get(0).suit().ordinal())) > 0) {
+				return true;
+			}
+		}
 		return false;
 	}
 
 	@Override
 	String cardType() {
-		return "FourOfKind";
+		return "StraightFlush";
 	}
 
 }
