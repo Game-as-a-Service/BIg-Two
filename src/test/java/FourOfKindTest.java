@@ -70,7 +70,7 @@ class FourOfKindTest {
 	}
 	
 	@Test
-	void test_cardType_is_not_fourOfKind_cardHaveThreeOfThem() {
+	void test_cardType_is_not_fourOfKind_cardsAreAllThree() {
 		FourOfKind fourOfLindType = new FourOfKind();
 		Player player = new Player("big mussle");
 		List<Card> cardList = new ArrayList<>();
